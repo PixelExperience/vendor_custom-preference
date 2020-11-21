@@ -16,7 +16,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dirtyunicorns.support">
+    package="com.android.settings.custom">
 
     <uses-sdk
         android:minSdkVersion="27" />
