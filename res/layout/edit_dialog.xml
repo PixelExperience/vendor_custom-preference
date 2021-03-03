@@ -28,7 +28,7 @@
         android:layout_gravity="bottom"
         android:ellipsize="end"
         android:singleLine="true"
-        android:hint="@string/edit_hint"
+        android:hint="@*android:string/screenshot_edit"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textAlignment="viewStart" />
 </LinearLayout>

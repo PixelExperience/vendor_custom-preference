@@ -58,6 +58,10 @@ public class SecureSettingListPreference extends ListPreference {
         super.setSummary(summary);
     }
 
+    public int getIntValue(int defValue) {
+        return getValue() == null ? defValue : Integer.valueOf(getValue());
+    }
+
     private boolean isPersisted() {
         return Settings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
     }
