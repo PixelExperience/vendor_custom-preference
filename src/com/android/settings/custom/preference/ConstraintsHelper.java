@@ -42,7 +42,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
-//import com.android.internal.custom.hardware.LineageHardwareManager;
+import com.android.internal.custom.hardware.LineageHardwareManager;
 import com.android.settings.custom.R;
 
 
@@ -185,8 +185,8 @@ public class ConstraintsHelper {
                     rFeature = rFeature.substring(1);
                 }
                 boolean available = rFeature.startsWith("lineagehardware:") ?
-                        false/*LineageHardwareManager.getInstance(mContext).isSupported(
-                                rFeature.substring("lineagehardware:".length()))*/ :
+                        LineageHardwareManager.getInstance(mContext).isSupported(
+                                rFeature.substring("lineagehardware:".length())) :
                         hasSystemFeature(mContext, rFeature);
                 if (available == negated) {
                     return false;
